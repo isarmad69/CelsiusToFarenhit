@@ -1,0 +1,20 @@
+<html>
+<title>Celsius to Farenhit</title>
+<h1>Celsius to Farenhit Converter</h1>
+<form onsubmit="result(event)">
+<h3> Enter Celsius Temprature : </h3>
+<input type="number" id="celsius" placeholder="Enter Celsius Temprature" required>
+<button type="submit">Convert</button>
+</form>
+<h1 id="resultshow"></h1>
+<script>
+function result(event) {
+event.preventDefault();
+    let celsiusconvert = document.querySelector("#celsius").value;
+   let farenhit = (Number(celsiusconvert) * 9)/5 + 32;
+    let message = `The temperature in Farenhit is ${farenhit}°C`;
+    document.querySelector("#resultshow").innerHTML = message;
+    console.log(message);
+}
+</script>
+</html>
